@@ -87,10 +87,11 @@ proof; the app writes only its receipt properties through the DataHub SDK.
 
 ## Demo evidence
 
-The repository includes a 49.9-second working-state walkthrough in
+Watch the public 49.9-second walkthrough on
+[YouTube](https://www.youtube.com/shorts/0HokRdSv5D4). The source upload
+artifact remains available at
 [`demo/video/lineage-relay-forge-walkthrough-draft.mp4`](demo/video/lineage-relay-forge-walkthrough-draft.mp4).
-Its three captured states and capture notes are documented in
-[`demo/`](demo/).
+Its three captured states and capture notes are documented in [`demo/`](demo/).
 
 The wide project cover used for the submission is in
 [`demo/submission/`](demo/submission/). It is assembled from the live

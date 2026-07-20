@@ -42,6 +42,9 @@
 - Drive mirror: `TMN_NAUMIO_HQ/06_DELIVERY/LINEAGE-RELAY-WRITEBACK-RECOVERY-PATCH-2026-07-20`
 - Initial Drive hash verification: passed for the decision note and receipt.
 - Notion pointer: `https://app.notion.com/p/3a3b143d29178111afe8f9c86dcad245`
+- Public source: `https://github.com/Peanuts1605/lineage-relay` on `main`.
+  The remote head was verified at `d0e4d84e576daf53e6f07f7622b7e4fca35c946d`
+  immediately after the verified patch history was pushed.
 - Reconciliation: this receipt was patched with the verified Drive and Notion
   paths, then mirrored again as the reconciled receipt.
 - Status: `valid`

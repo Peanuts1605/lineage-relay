@@ -114,6 +114,12 @@ bounded synthetic owner action and receipt write-back.
 - Notion receipt pointer: `https://app.notion.com/p/3a3b143d2917818d950be20e4ba98e23`
 - Reconciled receipt mirror: verified in the same Drive delivery folder by the
   mirror helper after the Drive and Notion paths were patched into this receipt.
+- Latest reconciliation: `20260720T100822053Z` mirrored the checked-in
+  fixture, current README, receipt, submission materials, video, and visual
+  evidence with SHA-256 checks recorded in `MIRROR_MANIFEST.json`.
+- Notion pointer was refreshed after that mirror at
+  `https://app.notion.com/p/3a3b143d2917818d950be20e4ba98e23`; this receipt
+  is re-mirrored below to close that reconciliation loop.
 
 ## Next action
 

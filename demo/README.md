@@ -10,3 +10,7 @@ locally-produced walkthrough of three actual Forge-backed states:
 The source captures are stored in `frames/`. The final video contains a local
 system-voice narration and no music or third-party media. It is a submission
 draft until it is uploaded to a public video host and linked from Devpost.
+
+`frames/04-portrait-needs-owner-readable.png` is the post-patch 1008 x 1208
+Forge capture proving the long receipt identifier remains visible inside the
+decision panel at the submitted portrait viewport.

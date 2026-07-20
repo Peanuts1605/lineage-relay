@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lineage Relay</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand"><span class="mark">LR</span><span>Lineage Relay</span></div>
+      <div class="proof"><span class="pulse"></span>Live DataHub + MCP evidence</div>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">Schema change review</p>
+        <h1>Rename a field.<br>Keep the people and systems attached.</h1>
+        <p class="request">Rename <code>orders.customer_id</code> to <code>buyer_id</code>, then remove the old field after migration.</p>
+        <div class="actions">
+          <button id="assess" class="primary">Assess change</button>
+          <button id="assign-owner">Assign ML owner</button>
+          <button id="governance">Check governance block</button>
+        </div>
+      </section>
+
+      <section class="review-grid" aria-live="polite">
+        <div class="evidence-panel">
+          <div class="section-head"><span>Evidence ledger</span><span id="hash" class="muted"></span></div>
+          <div class="source-line"><span class="asset source">orders.customer_id</span><span class="tag">PII</span></div>
+          <div class="lineage-path">
+            <div><span class="asset">analytics_orders_model.buyer_id</span><span>Owned by analytics-owner</span></div>
+            <div><span class="asset">revenue_dashboard.buyer_id</span><span>Owned by finance-bi</span></div>
+            <div class="warning"><span class="asset">ml_customer_features.customer_id</span><span id="ml-owner">Owner missing</span></div>
+          </div>
+          <p id="lineage-proof" class="muted"></p>
+        </div>
+        <aside class="decision-panel">
+          <span class="eyebrow">Release posture</span>
+          <h2 id="verdict">Loading evidence</h2>
+          <p id="reason">Reading DataHub schema, field lineage, ownership, and governance metadata.</p>
+          <div class="receipt"><span>Receipt</span><strong id="receipt">-</strong></div>
+          <div class="writeback">Decision record written to <code>orders</code></div>
+        </aside>
+      </section>
+
+      <section class="package">
+        <div class="section-head"><span>Generated review package</span><span class="muted">Nothing is deployed automatically.</span></div>
+        <div id="artifact-tabs" class="tabs"></div>
+        <pre id="artifact" aria-label="Generated artifact"></pre>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

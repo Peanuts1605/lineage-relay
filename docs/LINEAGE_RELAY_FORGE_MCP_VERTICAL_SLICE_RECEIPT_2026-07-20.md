@@ -74,6 +74,19 @@ patched into a full-width vertical control list and rechecked against the live
 Forge runtime. All four artifact labels, the `NEEDS_OWNER` posture, MCP badge,
 and generated receipt were visible without clipping.
 
+## Demo capture
+
+- Local draft: `demo/video/lineage-relay-forge-walkthrough-draft.mp4`
+- Duration: 49.9 seconds.
+- Footage: actual Chrome captures of the Forge-backed review desk in
+  `NEEDS_OWNER`, `READY`, and `BLOCKED_BY_GOVERNANCE` states.
+- Narration: a local macOS system voice, with no music or third-party visual
+  assets.
+- The lab was reseeded after capture and verified again in `NEEDS_OWNER` with
+  three MCP traces.
+- Public video hosting is still pending; this draft has not been represented as
+  a submitted Devpost video.
+
 ## Current tool decision
 
 The DataHub MCP route materially improves the product rather than adding a

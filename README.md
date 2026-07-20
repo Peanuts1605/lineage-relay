@@ -56,6 +56,13 @@ proof; the app writes only its receipt properties through the DataHub SDK.
    `BLOCKED_BY_GOVERNANCE` and no migration artifact.
 4. Every decision leaves a receipt and evidence hash on `orders` in DataHub.
 
+## Demo evidence
+
+The repository includes a 49.9-second working-state walkthrough in
+[`demo/video/lineage-relay-forge-walkthrough-draft.mp4`](demo/video/lineage-relay-forge-walkthrough-draft.mp4).
+Its three captured states and capture notes are documented in
+[`demo/`](demo/).
+
 ## Test
 
 ```bash

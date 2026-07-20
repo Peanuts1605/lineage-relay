@@ -33,8 +33,17 @@
 
 ## Shared Proof Reconciliation
 
-- Drive: pending initial verified mirror.
-- Notion pointer: pending.
+- Drive: `TMN_NAUMIO_HQ/06_DELIVERY/LINEAGE-RELAY-PORTRAIT-DEMO-READABILITY-2026-07-20/`
+  - Initial verified mirror: `20260720T170353568Z`
+  - Patch-note SHA-256:
+    `dcb8517bda473d46308a904777f0b53c9279c2d961b10ed86111d3cbcad5f00c`
+  - Portrait proof SHA-256:
+    `84a43e713255b399559c21711dc042d94382ce856924c67e35b876d768e02cd1`
+- Notion pointer: [Lineage Relay Portrait Demo Readability](https://app.notion.com/p/3a3b143d29178161a9c6e9a981b04950)
+
+This receipt was patched after the initial Drive verification and Notion
+readback. The reconciled receipt is mirrored again with its append-only
+portfolio checkpoint.
 
 ## Next Action
 

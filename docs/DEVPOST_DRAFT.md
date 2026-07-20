@@ -5,6 +5,15 @@
 Turn a risky schema rename into a clear release decision before people and
 systems get disconnected.
 
+## Submission assets
+
+- **Project URL:** <https://github.com/Peanuts1605/lineage-relay>
+- **Source repository:** <https://github.com/Peanuts1605/lineage-relay>
+- **Cover image:** [`demo/submission/lineage-relay-devpost-cover.png`](../demo/submission/lineage-relay-devpost-cover.png)
+  (2400 x 1260, composed from the live `NEEDS_OWNER` review state).
+- **Demo video:** [`demo/video/lineage-relay-forge-walkthrough-draft.mp4`](../demo/video/lineage-relay-forge-walkthrough-draft.mp4)
+  (49.896 seconds, H.264/AAC). Upload it with the title and description below.
+
 ## Challenge category
 
 **Metadata-Aware Code Generation & Development.** Lineage Relay uses the

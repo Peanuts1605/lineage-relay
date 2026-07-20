@@ -4,6 +4,8 @@ Lineage Relay turns a schema-change request into a reviewable release package
 grounded in a live DataHub metadata graph and verified by the official DataHub
 MCP server.
 
+![Lineage Relay review desk](demo/submission/lineage-relay-devpost-cover.png)
+
 Data teams usually discover that a harmless-looking column rename had a human
 owner, an ML feature, or a dashboard attached only after something breaks.
 Lineage Relay makes the consequence visible before release: exact field paths,
@@ -89,6 +91,10 @@ The repository includes a 49.9-second working-state walkthrough in
 [`demo/video/lineage-relay-forge-walkthrough-draft.mp4`](demo/video/lineage-relay-forge-walkthrough-draft.mp4).
 Its three captured states and capture notes are documented in
 [`demo/`](demo/).
+
+The wide project cover used for the submission is in
+[`demo/submission/`](demo/submission/). It is assembled from the live
+`NEEDS_OWNER` review state, not a conceptual mockup.
 
 ## Test
 

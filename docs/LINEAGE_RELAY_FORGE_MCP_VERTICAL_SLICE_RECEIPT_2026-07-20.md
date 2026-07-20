@@ -4,16 +4,17 @@
 - Agent: ORION_L
 - Host: Leo Lounge with Forge (`M2 Pro Mini`) as the validation surface
 - Time: 2026-07-20 America/New_York
-- Status: `PASS_WITH_NEXT_ACTIONS`
+- Status: `PASS_WITH_SUBMISSION_HANDOFF`
 
 ## Decision
 
-Advance Lineage Relay to independent QA and demo capture. The core contest
-claim now has live synthetic proof: a schema-change decision depends on real
-DataHub metadata and three official DataHub MCP field-level path traces.
+Advance Lineage Relay to independent QA and submission handoff. The core
+contest claim has live synthetic proof: a schema-change decision depends on
+real DataHub metadata and three official DataHub MCP field-level path traces.
 
-It is not yet a submitted entry. Remaining submission work is an independent
-QA pass, a short demo video, Devpost fields, and final eligibility attestation.
+It is not yet a submitted entry. The remaining work is independent QA, public
+hosting for the finished short demo, Devpost fields, and final eligibility
+attestation.
 
 ## Product truth
 
@@ -29,7 +30,8 @@ posture, review package, and receipt in one surface.
 - QA packet: `docs/FULCRO_QA_PACKET.md`
 - Desktop visual evidence: `docs/evidence/forge-mcp-needs-owner.png`
 - Mobile visual evidence: `docs/evidence/forge-mcp-needs-owner-mobile.png`
-- Forge fixture: `/Users/alfredthebot/Documents/New project/contest-portfolio/lineage-relay-forge/seed_lineage_relay_fixture.py`
+- Public fixture: `scripts/seed_lineage_relay_fixture.py` (included in the
+  public repository at commit `3d87805`).
 
 ## Live proof
 
@@ -59,12 +61,22 @@ posture, review package, and receipt in one surface.
 ## Validation
 
 - `python -m compileall -q app`: pass on Forge.
-- `python -m pytest -q`: `5 passed` on Forge.
+- `python -m pytest -q`: `6 passed` on Forge after the public fixture was
+  executed from `scripts/seed_lineage_relay_fixture.py`.
 - Browser validation: visible owner and governance controls were exercised
   against the Forge runtime; the initial evidence state is captured in the
   screenshot above.
 - Public repository was re-opened after push and rendered its README, source,
   license, tests, and judge packet.
+
+## Public reproducibility patch
+
+The first README referred to a Forge-only fixture path. That would have made a
+judge depend on the lab's private layout. The fixture now lives in this public
+repository, and the README contains the full local path: start DataHub OSS,
+clone the official DataHub MCP server, seed the synthetic graph, and start the
+review desk. Forge executed that checked-in fixture successfully, then the API
+returned `NEEDS_OWNER` with three MCP traces.
 
 ## Mobile verification
 
@@ -105,6 +117,6 @@ bounded synthetic owner action and receipt write-back.
 
 ## Next action
 
-Give the QA packet to Fulcro, address any reproducible contradiction, then
-record a 60-90 second demo from the restored `NEEDS_OWNER` state before opening
-the Devpost project form.
+Upload the finished 49.9-second working-state demo to a publicly visible video
+host, complete the Devpost submission fields after the entrant performs the
+legal eligibility and rules attestation, and run the independent QA packet.

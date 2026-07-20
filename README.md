@@ -24,6 +24,16 @@ It generates a migration, compatibility view, contract test, and change summary
 for review. It never runs the migration. Each review writes a receipt back to
 the source asset as DataHub custom properties.
 
+## Hackathon fit
+
+Lineage Relay is built for DataHub's **Metadata-Aware Code Generation &
+Development** category. It does not generate a migration from a prompt alone:
+it first reads the affected field's schema, field-level lineage, ownership, and
+governance context through DataHub MCP. The resulting package is code a data
+team can review in a pull request: a migration, compatibility view, contract
+test, and change summary. The sample output below lets judges inspect that
+package before starting the lab.
+
 ## Sample review package
 
 Judges can inspect the generated `NEEDS_OWNER` package without starting the

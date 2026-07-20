@@ -7,10 +7,12 @@ systems get disconnected.
 
 ## Challenge category
 
-**Agents That Do Real Work.** Lineage Relay reads the DataHub context graph
-through the official MCP server, assigns a bounded synthetic owner action when
-the review asks for it, and writes the decision receipt back to the source
-asset so the next reviewer inherits the evidence.
+**Metadata-Aware Code Generation & Development.** Lineage Relay uses the
+official DataHub MCP server to read the real field-level schema, lineage,
+ownership, and governance context before it generates a reviewable migration,
+compatibility view, contract test, and PR-ready change summary. It also writes
+the release decision receipt back to the source asset so the next reviewer
+inherits the evidence.
 
 ## Inspiration
 
@@ -65,6 +67,24 @@ failure that optimistic automation tends to miss.
 4. Turn on the governance constraint and show `BLOCKED_BY_GOVERNANCE` with no
    migration artifact.
 5. Point out the receipt and evidence hash written to `orders`.
+
+## Public demo metadata
+
+**YouTube title**
+
+`Lineage Relay: DataHub MCP Evidence for Safer Schema Changes`
+
+**YouTube description**
+
+Lineage Relay turns a risky field rename into a clear release decision before
+people and systems get disconnected. In this 50-second walkthrough, a live
+synthetic DataHub graph and the official DataHub MCP server expose three
+field-level lineage paths, find an unowned PII-dependent ML feature, and return
+`NEEDS_OWNER` instead of a false green light. Assigning an owner produces a
+review package; a governance rule blocks it again. Every decision leaves a
+receipt and evidence hash on the source asset.
+
+Repository: https://github.com/Peanuts1605/lineage-relay
 
 ## Challenges
 

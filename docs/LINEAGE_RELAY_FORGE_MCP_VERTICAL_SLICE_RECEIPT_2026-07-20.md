@@ -74,9 +74,12 @@ bounded synthetic owner action and receipt write-back.
 
 ## Shared proof reconciliation
 
-- Drive delivery folder: pending mirror
-- Notion receipt pointer: pending creation
-- Reconciled receipt mirror: pending after both paths are verified
+- Drive delivery folder: `/Users/alfredthebot/Library/CloudStorage/GoogleDrive-maggytatiana@gmail.com/My Drive/TMN_NAUMIO_HQ/06_DELIVERY/LINEAGE-RELAY-FORGE-MCP-VERTICAL-SLICE-2026-07-20`
+- Drive mirror check: `MIRROR_MANIFEST.json` recorded matching SHA-256 values for
+  the receipt, submission draft, QA packet, screenshot, and README.
+- Notion receipt pointer: `https://app.notion.com/p/3a3b143d2917818d950be20e4ba98e23`
+- Reconciled receipt mirror: verified in the same Drive delivery folder by the
+  mirror helper after the Drive and Notion paths were patched into this receipt.
 
 ## Next action
 

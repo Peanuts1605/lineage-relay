@@ -52,12 +52,14 @@ horizontal overflow.
 | Browser errors | none |
 | 390 px overflow | false |
 
-Fresh rendered evidence:
+Representative rendered states are available in the public repository:
 
-- `demo/frames/05-live-local-needs-owner-2026-07-20.png`
-- `demo/frames/06-live-local-ready-2026-07-20.png`
-- `demo/frames/07-live-local-governance-2026-07-20.png`
-- `demo/frames/08-live-local-mobile-2026-07-20.png`
+- `demo/frames/01-needs-owner.png`
+- `demo/frames/02-ready.png`
+- `demo/frames/03-blocked-by-governance.png`
+- `demo/frames/04-portrait-needs-owner-readable.png`
+
+The fresh July 20 replay captures are retained with the shared proof bundle.
 
 ## Current Tool Check
 

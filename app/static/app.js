@@ -18,6 +18,7 @@ function render(review) {
   state.review = review;
   const decision = review.decision;
   document.body.dataset.verdict = decision;
+  $("#proof-status").innerHTML = '<span class="pulse"></span>Live DataHub + MCP evidence';
   $("#verdict").textContent = decision.replaceAll("_", " ");
   $("#reason").textContent = review.reason;
   $("#receipt").textContent = review.receipt_id;
@@ -49,13 +50,27 @@ function renderArtifacts(artifacts) {
   $("#artifact").textContent = state.activeArtifact ? artifacts[state.activeArtifact] : "No package generated.";
 }
 
+function renderUnavailable(message) {
+  state.review = null;
+  state.activeArtifact = null;
+  document.body.dataset.verdict = "UNAVAILABLE";
+  $("#proof-status").innerHTML = '<span class="pulse"></span>Metadata proof unavailable';
+  $("#verdict").textContent = "DataHub unavailable";
+  $("#reason").textContent = message;
+  $("#receipt").textContent = "-";
+  $("#hash").textContent = "Evidence unavailable";
+  $("#ml-owner").textContent = "Proof unavailable";
+  $("#lineage-proof").textContent = "The metadata proof path could not be verified.";
+  $("#artifact-tabs").innerHTML = "";
+  $("#artifact").textContent = "No review package was generated.";
+}
+
 async function run(button, path, options) {
   setBusy(button, true);
   try {
     render(await request(path, options));
   } catch (error) {
-    $("#reason").textContent = error.message;
-    $("#verdict").textContent = "DataHub unavailable";
+    renderUnavailable(error.message);
   } finally {
     setBusy(button, false);
   }

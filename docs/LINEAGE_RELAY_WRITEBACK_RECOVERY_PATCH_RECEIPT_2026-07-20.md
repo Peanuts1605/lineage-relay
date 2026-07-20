@@ -11,6 +11,8 @@
 - Decision note: `docs/LINEAGE_RELAY_WRITEBACK_RECOVERY_PATCH_2026-07-20.md`
 - Product files: `app/static/index.html`, `app/static/app.js`
 - Regression test: `tests/test_recovery_contract.py`
+- Local commit: `379ae10898ddbecaca988df57b00fc3addf66eb0`
+- Decision-note SHA-256: `5e43a0b638a7250eac390a7619589e786bb884a2275076cc435841d85297500a`
 
 ## Proof
 
@@ -37,6 +39,9 @@
 
 ## Shared Proof
 
-- Drive mirror: pending
-- Notion pointer: pending
-- Status before mirroring: `partial`
+- Drive mirror: `TMN_NAUMIO_HQ/06_DELIVERY/LINEAGE-RELAY-WRITEBACK-RECOVERY-PATCH-2026-07-20`
+- Initial Drive hash verification: passed for the decision note and receipt.
+- Notion pointer: `https://app.notion.com/p/3a3b143d29178111afe8f9c86dcad245`
+- Reconciliation: this receipt was patched with the verified Drive and Notion
+  paths, then mirrored again as the reconciled receipt.
+- Status: `valid`

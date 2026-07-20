@@ -31,17 +31,34 @@ lab in [`examples/needs-owner/`](examples/needs-owner/). The package keeps the
 legacy column in place and makes the ownership gap explicit; it is review
 material, not an automatically applied migration.
 
-## Local proof
+## Run the proof locally
 
-1. Run the Forge fixture from `contest-portfolio/lineage-relay-forge/`.
-2. Install `requirements.txt` into one Python 3.11 environment.
-3. Install the official `acryldata/mcp-server-datahub` source in editable mode
-   and set `LINEAGE_RELAY_MCP_SOURCE_ROOT` to its `src` directory. Editable
-   mode keeps the MCP server's bundled GraphQL assets alongside the process.
-4. Set `DATAHUB_GMS_URL=http://localhost:8080` and
-   `LINEAGE_RELAY_MCP_PYTHON` to that Python environment.
-5. Start `uvicorn app.main:app --host 127.0.0.1 --port 4176` from this directory.
-6. Open `http://127.0.0.1:4176`.
+The repository contains the complete public-safe fixture. It requires Python
+3.11+, Docker, and a local clone of the official DataHub MCP server.
+
+```bash
+git clone https://github.com/Peanuts1605/lineage-relay.git
+cd lineage-relay
+python3.11 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+
+# Start a local DataHub OSS instance, then wait for http://localhost:8080.
+datahub docker quickstart
+
+# Use the official MCP server implementation for the field-level evidence.
+git clone https://github.com/acryldata/mcp-server-datahub.git ../mcp-server-datahub
+pip install -e ../mcp-server-datahub
+
+export DATAHUB_GMS_URL=http://localhost:8080
+export LINEAGE_RELAY_MCP_PYTHON="$PWD/.venv/bin/python"
+export LINEAGE_RELAY_MCP_SOURCE_ROOT="$PWD/../mcp-server-datahub/src"
+python scripts/seed_lineage_relay_fixture.py
+./scripts/start-forge-demo.sh
+```
+
+Open `http://127.0.0.1:4176`. The fixture creates only synthetic datasets and
+metadata. It is safe to reset by rerunning the seed script.
 
 The MCP server runs with its mutation tools disabled. It provides the field-level
 proof; the app writes only its receipt properties through the DataHub SDK.

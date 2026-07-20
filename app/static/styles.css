@@ -61,4 +61,7 @@ body[data-verdict="BLOCKED_BY_GOVERNANCE"] .decision-panel { background: #f0cbc4
   .evidence-panel { border-right: 0; border-bottom: 1px solid #9fb2ab; }
   .evidence-panel, .decision-panel { min-height: auto; padding: 22px; }
   .decision-panel { min-height: 260px; }
+  .tabs { display: grid; grid-template-columns: 1fr; overflow-x: visible; }
+  .tabs button, .tabs button:last-child { border: 1px solid #8da49d; border-bottom: 0; text-align: left; }
+  .tabs button:last-child { border-bottom: 1px solid #8da49d; }
 }

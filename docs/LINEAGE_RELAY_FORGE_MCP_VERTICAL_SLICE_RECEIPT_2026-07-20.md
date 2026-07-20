@@ -27,7 +27,8 @@ posture, review package, and receipt in one surface.
 - Public repository: `https://github.com/Peanuts1605/lineage-relay`
 - Submission draft: `docs/DEVPOST_DRAFT.md`
 - QA packet: `docs/FULCRO_QA_PACKET.md`
-- Visual evidence: `docs/evidence/forge-needs-owner.png`
+- Desktop visual evidence: `docs/evidence/forge-mcp-needs-owner.png`
+- Mobile visual evidence: `docs/evidence/forge-mcp-needs-owner-mobile.png`
 - Forge fixture: `/Users/alfredthebot/Documents/New project/contest-portfolio/lineage-relay-forge/seed_lineage_relay_fixture.py`
 
 ## Live proof
@@ -64,6 +65,14 @@ posture, review package, and receipt in one surface.
   screenshot above.
 - Public repository was re-opened after push and rendered its README, source,
   license, tests, and judge packet.
+
+## Mobile verification
+
+At a 390px viewport, the generated review-package controls initially required
+horizontal scrolling, which clipped the last label. The mobile layout was
+patched into a full-width vertical control list and rechecked against the live
+Forge runtime. All four artifact labels, the `NEEDS_OWNER` posture, MCP badge,
+and generated receipt were visible without clipping.
 
 ## Current tool decision
 

@@ -23,6 +23,7 @@ function render(review) {
   $("#reason").textContent = review.reason;
   $("#receipt").textContent = review.receipt_id;
   $("#hash").textContent = `Evidence ${review.evidence_hash}`;
+  $("#writeback").innerHTML = "Decision record written to <code>orders</code>";
   const owners = review.evidence.owners.ml_customer_features;
   $("#ml-owner").textContent = owners.length ? `Owned by ${owners.join(", ")}` : "Owner missing";
   $("#lineage-proof").textContent = review.evidence.exact_lineage_present
@@ -59,6 +60,7 @@ function renderUnavailable(message) {
   $("#reason").textContent = message;
   $("#receipt").textContent = "-";
   $("#hash").textContent = "Evidence unavailable";
+  $("#writeback").textContent = "No decision record was written.";
   $("#ml-owner").textContent = "Proof unavailable";
   $("#lineage-proof").textContent = "The metadata proof path could not be verified.";
   $("#artifact-tabs").innerHTML = "";

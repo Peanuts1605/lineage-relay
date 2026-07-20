@@ -45,6 +45,11 @@ This receipt was patched after the initial Drive verification and Notion
 readback. The reconciled receipt is mirrored again with its append-only
 portfolio checkpoint.
 
+- Portfolio checkpoint: state `69`
+  - SHA-256: `d0a604231f50860774bfae9ba1bfb932eac0a0c98fb4066d53d47e05ba44ec89`
+  - Transition script:
+    `ops/canonical_work_exchange_v0/scripts/update-tracker-v69-orion-l-contest-portfolio-lineage-portrait-readability-20260720T170500Z.mjs`
+
 ## Next Action
 
 Keep Lineage Relay stable and use the readable portrait proof when publishing

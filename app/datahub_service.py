@@ -195,14 +195,19 @@ class DataHubReviewService:
     def _artifacts(self, decision: Decision) -> dict[str, str]:
         if not decision.include_executable_migration:
             return {
-                "CHANGE_SUMMARY.md": f"# Release blocked\n\n{decision.reason}\n\nNo migration was generated.",
-                "datahub-decision.json": json.dumps({"verdict": decision.verdict}, indent=2),
+                "CHANGE_SUMMARY.md": f"# Release blocked\n\n{decision.reason}\n\nNo migration was generated.\n",
+                "datahub-decision.json": json.dumps({"verdict": decision.verdict}, indent=2) + "\n",
             }
         return {
-            "migration.sql": "ALTER TABLE orders ADD COLUMN buyer_id VARCHAR;\nUPDATE orders SET buyer_id = customer_id WHERE buyer_id IS NULL;\n-- Do not drop customer_id in this release.",
-            "compatibility_view.sql": "CREATE OR REPLACE VIEW orders_compat AS\nSELECT order_id, buyer_id, buyer_id AS customer_id, created_at\nFROM orders;",
-            "test_customer_key_contract.sql": "SELECT COUNT(*) AS mismatches\nFROM orders_compat\nWHERE buyer_id IS DISTINCT FROM customer_id;",
-            "CHANGE_SUMMARY.md": f"# Schema change review\n\nVerdict: {decision.verdict}\n\n{decision.reason}\n\nRollback: keep `customer_id` through the compatibility window.",
+            "migration.sql": "ALTER TABLE orders ADD COLUMN buyer_id VARCHAR;\nUPDATE orders SET buyer_id = customer_id WHERE buyer_id IS NULL;\n-- Do not drop customer_id in this release.\n",
+            "compatibility_view.sql": "CREATE OR REPLACE VIEW orders_compat AS\nSELECT order_id, buyer_id, buyer_id AS customer_id, created_at\nFROM orders;\n",
+            "test_customer_key_contract.sql": "SELECT COUNT(*) AS mismatches\nFROM orders_compat\nWHERE buyer_id IS DISTINCT FROM customer_id;\n",
+            "CHANGE_SUMMARY.md": (
+                "# Schema change review\n\n"
+                f"Verdict: `{decision.verdict}`\n\n"
+                f"{decision.reason.replace(ML_FEATURES, f'`{ML_FEATURES}`')}\n\n"
+                "Rollback: keep `customer_id` through the compatibility window.\n"
+            ),
         }
 
     def _write_back(self, payload: dict[str, Any]) -> None:

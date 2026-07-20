@@ -5,6 +5,13 @@
 Turn a risky schema rename into a clear release decision before people and
 systems get disconnected.
 
+## Challenge category
+
+**Agents That Do Real Work.** Lineage Relay reads the DataHub context graph
+through the official MCP server, assigns a bounded synthetic owner action when
+the review asks for it, and writes the decision receipt back to the source
+asset so the next reviewer inherits the evidence.
+
 ## Inspiration
 
 A column rename looks tiny in a migration ticket. In a real data stack it can

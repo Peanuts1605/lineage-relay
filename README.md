@@ -24,6 +24,13 @@ It generates a migration, compatibility view, contract test, and change summary
 for review. It never runs the migration. Each review writes a receipt back to
 the source asset as DataHub custom properties.
 
+## Sample review package
+
+Judges can inspect the generated `NEEDS_OWNER` package without starting the
+lab in [`examples/needs-owner/`](examples/needs-owner/). The package keeps the
+legacy column in place and makes the ownership gap explicit; it is review
+material, not an automatically applied migration.
+
 ## Local proof
 
 1. Run the Forge fixture from `contest-portfolio/lineage-relay-forge/`.

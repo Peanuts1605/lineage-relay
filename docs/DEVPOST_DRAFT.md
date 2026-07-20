@@ -11,8 +11,10 @@ systems get disconnected.
 - **Source repository:** <https://github.com/Peanuts1605/lineage-relay>
 - **Cover image:** [`demo/submission/lineage-relay-devpost-cover.png`](../demo/submission/lineage-relay-devpost-cover.png)
   (2400 x 1260, composed from the live `NEEDS_OWNER` review state).
-- **Demo video:** [`demo/video/lineage-relay-forge-walkthrough-draft.mp4`](../demo/video/lineage-relay-forge-walkthrough-draft.mp4)
-  (49.896 seconds, H.264/AAC). Upload it with the title and description below.
+- **Demo video:** [YouTube walkthrough](https://www.youtube.com/shorts/0HokRdSv5D4)
+  (49.896 seconds, H.264/AAC; published 2026-07-20 and independently returned
+  HTTP 200). The source upload artifact remains
+  [`demo/video/lineage-relay-forge-walkthrough-draft.mp4`](../demo/video/lineage-relay-forge-walkthrough-draft.mp4).
 
 ## Challenge category
 
@@ -94,6 +96,10 @@ review package; a governance rule blocks it again. Every decision leaves a
 receipt and evidence hash on the source asset.
 
 Repository: https://github.com/Peanuts1605/lineage-relay
+
+**Published walkthrough**
+
+https://www.youtube.com/shorts/0HokRdSv5D4
 
 ## Challenges
 

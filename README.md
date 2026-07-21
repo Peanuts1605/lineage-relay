@@ -30,6 +30,20 @@ It generates a migration, compatibility view, contract test, and change summary
 for review. It never runs the migration. Each review writes a receipt back to
 the source asset as DataHub custom properties.
 
+## Fast judge path
+
+Start with the [49.9-second walkthrough](https://www.youtube.com/shorts/0HokRdSv5D4),
+then inspect the checked-in [`NEEDS_OWNER` review package](examples/needs-owner/).
+The proof is deliberately narrow:
+
+1. A PII-dependent ML feature has no owner, so the review returns `NEEDS_OWNER`.
+2. Assigning the synthetic owner returns `READY` and exposes the review package.
+3. A governance constraint returns `BLOCKED_BY_GOVERNANCE` and withholds the
+   migration artifact.
+
+The repository is the functional test build. It uses only synthetic metadata,
+requires no credentials, and includes the exact local run path below.
+
 ## Hackathon fit
 
 Lineage Relay is built for DataHub's **Metadata-Aware Code Generation &
@@ -79,7 +93,7 @@ metadata. It is safe to reset by rerunning the seed script.
 The MCP server runs with its mutation tools disabled. It provides the field-level
 proof; the app writes only its receipt properties through the DataHub SDK.
 
-## Judge check in one minute
+## Verify the working app locally
 
 1. Open the seeded `NEEDS_OWNER` review: the ML feature uses PII and has no
    owner, while the DataHub MCP trace confirms all three column paths.

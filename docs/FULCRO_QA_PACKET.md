@@ -33,7 +33,8 @@ compatibility metadata, and three exact MCP field paths support the decision.
 
 ## Existing proof
 
-- Five unit tests: decision logic and MCP response validation.
+- Eight focused tests: decision logic, MCP response validation, recovery, and
+  checked-in review-package consistency.
 - Live run: all three outcomes exercised after MCP integration.
 - Browser run: owner mutation and governance control exercised against Forge.
 - Screenshot: `docs/evidence/forge-needs-owner.png`.

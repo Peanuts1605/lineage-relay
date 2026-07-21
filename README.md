@@ -18,6 +18,10 @@ DataHub instance. It then asks DataHub MCP to trace three exact column paths:
 source to analytics, analytics to dashboard, and source to ML features. It
 returns one deterministic posture:
 
+Each MCP trace is accepted only when it contains the requested source and
+target fields in that downstream order. A reversed or incomplete path is not
+treated as evidence.
+
 - `NEEDS_OWNER` when sensitive downstream use has no accountable owner.
 - `READY` when owners and compatibility actions are present.
 - `BLOCKED_BY_GOVERNANCE` when a removal rule blocks the request.

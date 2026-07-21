@@ -50,3 +50,17 @@ def test_rejects_a_path_without_the_requested_target_field() -> None:
             target_urn=TARGET,
             target_column="customer_id",
         )
+
+
+def test_rejects_a_reversed_field_path() -> None:
+    payload = json.loads(path_payload())
+    payload["paths"][0]["path"].reverse()
+
+    with pytest.raises(MCPLineageError, match="direction"):
+        parse_lineage_path_response(
+            json.dumps(payload),
+            source_urn=SOURCE,
+            source_column="customer_id",
+            target_urn=TARGET,
+            target_column="customer_id",
+        )

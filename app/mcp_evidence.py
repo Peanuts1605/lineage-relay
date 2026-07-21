@@ -59,6 +59,8 @@ def parse_lineage_path_response(
     expected_target = f"urn:li:schemaField:({target_urn},{target_column})"
     if expected_source not in urns or expected_target not in urns:
         raise MCPLineageError("DataHub MCP returned a path that does not match the requested fields.")
+    if urns.index(expected_source) >= urns.index(expected_target):
+        raise MCPLineageError("DataHub MCP returned a path in the wrong downstream direction.")
 
     return MCPLineageTrace(
         source_urn=source_urn,

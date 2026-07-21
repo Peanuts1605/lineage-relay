@@ -25,7 +25,7 @@ context for the next reviewer.
 | Criterion | Evidence in this repository |
 | --- | --- |
 | Use of DataHub | Live local DataHub graph; schema, PII, ownership, field lineage, and receipt write-back. |
-| Technical execution | Six focused tests plus Forge validation of all three release postures. |
+| Technical execution | Seven focused tests plus Forge validation of all three release postures. |
 | Originality | A release decision can be `NEEDS_OWNER`, preventing a false green light when metadata shows an unowned sensitive dependency. |
 | Real-world usefulness | Data teams receive a reviewable migration, compatibility view, contract test, and change summary before a field is removed. |
 | Submission quality | One-minute judge path, public source, Apache 2.0 license, visual proof, reproducible setup, and a short demo script. |
@@ -36,7 +36,7 @@ context for the next reviewer.
 - [x] Clear local setup and test instructions.
 - [x] Sample generated review artifacts in `examples/needs-owner/`.
 - [x] Demo script grounded in the live Forge scenario.
-- [ ] Public sub-three-minute video showing the working review desk.
+- [x] Public 49.896-second video showing the working review desk: [YouTube walkthrough](https://www.youtube.com/shorts/0HokRdSv5D4) (public HTTP route checked 2026-07-20).
 - [ ] Devpost project form, final eligibility attestation, and submission.
 
 ## Decision
